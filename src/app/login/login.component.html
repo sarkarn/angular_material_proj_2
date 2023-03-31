@@ -1,0 +1,19 @@
+
+<div [ngSwitch] ="color"> 
+    <div *ngSwitchCase="'red'" >
+        <label [class]="'text-red'">  Login ID</label>
+    </div>
+    <div *ngSwitchCase="'blue'" >
+        <label [class]="'text-blue'">  Login ID</label>
+    </div>
+    <div *ngSwitchCase="'green'" >
+        <label [class]="'text-green'">  Login ID</label>
+    </div>
+</div>
+
+<input [(ngModel)]="loginId" [style.color] = "'blue'" type="text"  value="Enter User Name">
+<label [class]="'text-blue'"> Password</label>
+<input [(ngModel)]="password" [style.color] = "'blue'" type="text"  value="">
+<button (click)="onClick($event)">Submit</button>
+
+

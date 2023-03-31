@@ -1,0 +1,78 @@
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px" class="align" >
+    <mat-card fxFlex.lg="30%" >
+        <mat-card-header>
+            <mat-card-title>Strategy Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div layout="row" layout-margin>
+                <span>Strategy Name : {{strategyDetail[0].name}}</span> &nbsp;&nbsp;&nbsp;
+                <span>Strategy Symbol : {{strategyDetail[0].symbol}}</span>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="strategy-button-row">
+            <button (click)="onSelect()" mat-raised-button color="primary">Create Strategy</button>
+          </div>
+      </mat-card-actions>
+        
+    </mat-card>
+    <mat-card fxFlex="30%" class="strategy-mat-card">
+      <mat-card-header>
+        <mat-card-title>Strategy Composition</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="mat-elevation-z8">
+          <mat-table [dataSource]="dataSource" matSort>
+              <!-- Position Column -->
+              <ng-container matColumnDef="security_name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Security Name</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.security_name}} </mat-cell>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="symbol">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.symbol}} 
+                <a fxFlexFill [routerLink]="'/strategymgmt/'+element.id" class="mat-row-link"></a>
+              </mat-cell>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="weight">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.weight}} 
+                  <a fxFlexFill [routerLink]="'/strategymgmt/'+element.id" class="mat-row-link"></a>
+                </mat-cell>
+                </ng-container>
+          
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row (click)="logData(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+        </div>
+      </mat-card-content>
+    </mat-card> 
+
+    <mat-card fxFlex="30%" class="strategy-mat-card">
+        <mat-card-header>
+          <mat-card-title>Strategy Risk Profile</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row" class="mat-elevation-z8">
+            <div class="box-row">Market Value : {{strategyDetail[0].risk_profile.market_value}}</div>
+            <div class="col s1">Beta : {{strategyDetail[0].risk_profile.beta}}</div>
+            <div class="col s1">PE Ratio: {{strategyDetail[0].risk_profile.pe_ratio}}</div>
+            <div class="col s1">Sortino Ration: {{strategyDetail[0].risk_profile.sortino_ratio}}</div>
+            <div class="col s1">Tracking Error: {{strategyDetail[0].risk_profile.tracking_error}}</div>
+          </div>
+        </mat-card-content>
+    </mat-card> 
+    <mat-card fxFlex="30%" class="strategy-mat-card">
+      <mat-card-header>
+        <mat-card-title>Growth of Hypothetical $10,000*</mat-card-title>
+      </mat-card-header>
+    </mat-card> 
+  </div>
+</div>

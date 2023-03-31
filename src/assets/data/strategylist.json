@@ -1,0 +1,12 @@
+[
+    {"id": 1, "name": "High Risk Strategy","symbol": "HRS"},
+    {"id": 2, "name": "Low Risk Strategy","symbol": "LRS"},
+    {"id": 3, "name": "10 Years Fixed Income Strategy", "symbol": "10YFS"},
+	{"id": 4, "name": "15 Glide Path Strategy", "symbol": "15GLS"},
+	{"id": 5, "name": "10 Retirement Strategy", "symbol": "10RS"},
+	{"id": 6, "name": "Conventional SMA Strategy", "symbol": "SMAS"},
+	{"id": 7, "name": "High Yield  Strategy", "symbol": "HIGHYS"},
+	{"id": 8, "name": "Growth Strategy ", "symbol": "GWS"},
+	{"id": 9, "name": "Market Leader Strategy", "symbol": "MKLS"},
+	{"id": 10, "name": "Annuity Strategy", "symbol": "ANS"}
+]

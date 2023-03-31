@@ -1,0 +1,12 @@
+[
+    {"id": 8, "name": "High Yield  Strategy", "symbol": "HIGHYS", 
+	 "composition": [
+		{"security_name": "Apple Inc", "symbol": "AAPL", "weight" : 0.2},
+		{"security_name": "Google ", "symbol": "GOOG", "weight" : 0.3},
+		{"security_name": "Microsoft", "symbol": "MSFT", "weight" : 0.3},
+		{"security_name": "Walmart", "symbol": "WAL", "weight" : 0.1},
+		{"security_name": "Intel Inc", "symbol": "INTC", "weight" : 0.1}
+		],
+	 "risk_profile": { "market_value": 300, "beta": 1.2, "pe_ratio": 1.3, "sortion_ratio": 1.4, "tracking_error": 2.4}
+	 }
+]

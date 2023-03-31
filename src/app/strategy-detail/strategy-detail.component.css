@@ -1,0 +1,23 @@
+.strategy-mat-card {
+    max-width: 400px;
+    height: 600px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+.strategy-button-row button,
+.strategy-button-row a {
+  margin-right: 8px;
+}
+
+.strategy-disabled {
+  display: inline-block;
+}
